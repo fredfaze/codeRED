@@ -1,0 +1,150 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Gui = Instance.new("Frame")
+local Funky = Instance.new("TextButton")
+local closeGUI = Instance.new("TextButton")
+local Null = Instance.new("TextButton")
+local Admin = Instance.new("TextButton")
+local CMDX = Instance.new("TextButton")
+local OpenGUI = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Gui.Name = "Gui"
+Gui.Parent = ScreenGui
+Gui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.Position = UDim2.new(0.331, 0, -0.400000006, 0)
+Gui.Size = UDim2.new(0, 453, 0, 258)
+
+Funky.Name = "Funky"
+Funky.Parent = Gui
+Funky.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Funky.Position = UDim2.new(0.0264900662, 0, 0.813953459, 0)
+Funky.Size = UDim2.new(0, 200, 0, 37)
+Funky.Font = Enum.Font.Ubuntu
+Funky.Text = "Funky friday autoplay"
+Funky.TextColor3 = Color3.fromRGB(0, 0, 0)
+Funky.TextSize = 20.000
+
+closeGUI.Name = "closeGUI"
+closeGUI.Parent = Gui
+closeGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+closeGUI.Position = UDim2.new(0.854304612, 0, -0.000870342425, 0)
+closeGUI.Size = UDim2.new(0, 66, 0, 27)
+closeGUI.Font = Enum.Font.Ubuntu
+closeGUI.Text = "Close"
+closeGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+closeGUI.TextSize = 22.000
+
+Null.Name = "Null"
+Null.Parent = Gui
+Null.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Null.Position = UDim2.new(0.536423862, 0, 0.813953459, 0)
+Null.Size = UDim2.new(0, 200, 0, 37)
+Null.Font = Enum.Font.Ubuntu
+Null.Text = "Nullware Animations"
+Null.TextColor3 = Color3.fromRGB(0, 0, 0)
+Null.TextSize = 20.000
+
+Admin.Name = "Admin"
+Admin.Parent = Gui
+Admin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Admin.Position = UDim2.new(0.0264900662, 0, 0.596899211, 0)
+Admin.Size = UDim2.new(0, 200, 0, 37)
+Admin.Font = Enum.Font.Ubuntu
+Admin.Text = "Reviz Admin"
+Admin.TextColor3 = Color3.fromRGB(0, 0, 0)
+Admin.TextSize = 20.000
+
+CMDX.Name = "CMDX"
+CMDX.Parent = Gui
+CMDX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMDX.Position = UDim2.new(0.536423862, 0, 0.596899211, 0)
+CMDX.Size = UDim2.new(0, 200, 0, 37)
+CMDX.Font = Enum.Font.Ubuntu
+CMDX.Text = "CMD X Admin"
+CMDX.TextColor3 = Color3.fromRGB(0, 0, 0)
+CMDX.TextSize = 20.000
+
+OpenGUI.Name = "OpenGUI"
+OpenGUI.Parent = ScreenGui
+OpenGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenGUI.Position = UDim2.new(0, 0, 0.94723928, 0)
+OpenGUI.Size = UDim2.new(0, 97, 0, 43)
+OpenGUI.Font = Enum.Font.Ubuntu
+OpenGUI.Text = "Open"
+OpenGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+OpenGUI.TextSize = 22.000
+
+-- Scripts:
+
+local function YUEB_fake_script() -- Gui.LocalScript 
+	local script = Instance.new('LocalScript', Gui)
+
+	local Funky = game.StarterGui.ScreenGui.Gui.Funky
+	local nullware = game.StarterGui.ScreenGui.Gui.Null
+	local Admin = game.StarterGui.ScreenGui.Gui.Admin
+	local CMDX = game.StarterGui.ScreenGui.Gui.CMDX
+	local button = game.StarterGui.ScreenGui.Gui.Funky
+	
+	Funky.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
+	end)
+	
+	nullware.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/dabc2500988785fbec1ce7c7aaee105d/raw/hVQJXfF4sR6yqSfJ"))()
+	end)
+	
+	Admin.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGetAsync("https://github.com/fredfaze/codeRED/blob/main/Reviz_Admin"))()
+	end)
+	
+	CMDX.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+	end)
+	
+	Funky.MouseButton1Click:Connect(function()
+		
+	end)
+end
+coroutine.wrap(YUEB_fake_script)()
+local function ZEBDNS_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local Gui = script.Parent.Gui
+	local OpenGUI = script.Parent.OpenGUI
+	
+	
+	OpenGUI.MouseButton1Click:Connect(function()
+		--Open admin main
+		
+		Gui:TweenPosition(
+			
+			UDim2.new(0.331, 0, 0.341, 0), --end
+			"Out",
+			"Back",
+			2,
+			false)
+	end)
+	local CloseGUI = script.Parent.Gui.closeGUI
+	
+	CloseGUI.MouseButton1Click:Connect(function()
+		--Close admin main
+	
+		Gui:TweenPosition(
+	
+			UDim2.new(0.331, 0, -0.4, 0), --end
+			"Out",
+			"Back",
+			2,
+			false)
+	end)
+end
+coroutine.wrap(ZEBDNS_fake_script)()
